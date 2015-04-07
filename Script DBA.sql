@@ -59,3 +59,9 @@ SELECT [object_name],
 FROM sys.dm_os_performance_counters
 WHERE [object_name] LIKE '%Manager%'
 AND [counter_name] = 'Page life expectancy'
+
+exec sp_helptext 'dbo.noticia'
+
+USE saoroque
+SELECT OBJECT_NAME(parent_id) as Parent_Object_Name, *
+FROM sys.triggers
